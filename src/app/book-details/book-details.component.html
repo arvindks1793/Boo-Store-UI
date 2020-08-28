@@ -1,0 +1,30 @@
+<h2>Book Details</h2> 
+
+<hr/>
+<div *ngIf="book">
+
+    <div style = "margin-bottom:10px;">
+        <label><b> Cover Image</b></label>
+      </div> 
+    <div style = "margin-bottom:25px;">
+        <a href = "https://placeholder.com"><img src="https://picsum.photos/150"></a>
+      </div> 
+      
+  <div>
+    <label><b>Title: </b></label> {{book.title}}
+  </div>
+  <div>
+    <label><b>Category: </b></label> {{book.category}}
+  </div>
+  <div>
+    <label><b>Authorname: </b></label> {{book.authorName}}
+  </div>  
+  <div>
+    <label><b>Publication Date: </b></label> {{book.publicationDate | date : 'shortDate'}}
+  </div> 
+  
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Book List</button><br>
