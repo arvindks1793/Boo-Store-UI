@@ -24,6 +24,8 @@ export class BookService {
 
   getBookList(params): Observable<any> {
     console.log(params)
-    return this.http.get(baseUrl+"?"+"pageSize="+params.size+"&"+"pageNo="+params.page);
+    return this.http.get(baseUrl+
+      "?"+"pageSize="+params.size+
+      "&"+"pageNo="+params.page);
   }
 }
